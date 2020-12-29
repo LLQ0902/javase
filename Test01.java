@@ -1,19 +1,23 @@
-package day01;
+package day02;
 
 public class Test01 {
     public static void main(String[] args) {
-        int[] arr = {11,22,33,44};
+        System.out.println(compare(178708906666608909L, 896980699987776L));
+    }
 
-        //数组名.length
-        System.out.println("arr数组中元素的个数为"+ arr.length);
+    public static boolean compare(int a, int b) {
+        return a == b;
+    }
 
-        //for(int i = 0;i<5;i++){     手动写死了，不严谨，不推荐
-        for(int i = 0;i<arr.length;++i){
+    public static boolean compare(long a, long b) {
+        return a == b;
+    }
 
-            System.out.println(arr[i]);
-        }
+    public static boolean compare(short a, short b) {
+        return a == b;
+    }
 
-
-
+    public static boolean compare(byte a, byte b) {
+        return a == b;
     }
 }

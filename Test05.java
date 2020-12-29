@@ -1,22 +1,23 @@
-package day01;
+package day02;
 
-import java.util.Scanner;
-//输入数据，判断在不在数组中，在数组中输出索引
+//反转
 public class Test05 {
-    public static void main(String []arge){
-        int [] arr ={19,28,37,46,50};
-        Scanner sc = new Scanner(System.in);
-        System.out.println("请输入数据");
+    public static void main(String[] args) {
+        int[] arr = {19, 28, 37, 46, 50};
 
-        int num = sc.nextInt();
-        int index = -1;
-        for (int i = 0; i <arr.length ; i++) {
-            if(arr[i]==num){
-                index = i;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr.length - 1 - i > i) {
+                int tem = arr[i];
+                arr[i] = arr[arr.length - 1 - i];
+                arr[arr.length - 1 - i] = tem;
+            }else{
                 break;
             }
         }
-        System.out.println(index);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]+" ");
 
+        }
     }
+
 }

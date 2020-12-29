@@ -1,21 +1,30 @@
-package day01;
-//数组求和
-import java.util.Scanner;
+package day02;
 
+//设计一个方法，该方法可以同时获取数组的最大值和最小值
 public class Test04 {
-   public static void main(String [] arge){
-       Scanner sc = new Scanner(System.in);
-       int [] arr = new int[5];
-       int sum = 0;
-       for(int i = 0;i<arr.length;i++){
-           System.out.println("请输入第"+(i+1)+"个数");
-           arr[i] = sc.nextInt();
+    public static void main(String[] args) {
+        int[] arr = {11, 22, 33, 44, 55};
+        int[] a = num(arr);
+        System.out.println(a[0]);
+        System.out.println(a[1]);
 
-       }
-       for(int i = 0;i<arr.length;i++){
-           sum += arr[i];
+    }
 
-       }
-       System.out.println("sum:"+sum);
-   }
+    public static int[] num(int[] arr) {
+        int max = arr[0];
+        int min = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            if (arr[i] < min) {
+                min = arr[i];
+
+            }
+
+        }
+        int[] maxAndMin = {min, max};
+        return maxAndMin;
+    }
 }

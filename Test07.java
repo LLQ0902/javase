@@ -1,36 +1,53 @@
-package day01;
-//评委打分，6个分数，去最大最小，求平均
-import java.util.Scanner;
-
+package day02;
+//二维数组
 public class Test07 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] arr = new int[6];
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println("请输入第" + (i + 1) + "个分数");
-            int f = sc.nextInt();
-            if (f >= 0 && f <= 100) {
-                arr[i] = f;
-            } else {
-                System.out.println("输入有误，请输入0~100的有效分数");
-                i--;
-            }
-            sum += arr[i];
-        }
 
-        int max = arr[0];
-        int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-        }
-        int avg = (sum - max - min) / 4;
-        System.out.println("平均分为："+avg);
+        int[][] arr = new int [3][3];
+        /*
+
+        [[I@1b6d3586
+        @：分隔符
+        1b6d3586：十六进制内存地址
+        I:数组中存储的数据类型
+        [[：几个中括号表示是几维数组
+         */
+
+        //二维数组存储一维数组的时候，存储的是一维数组的内存地址
+        System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]);
+
+        //输出二维数组中的第一个一维数组中的元素
+        System.out.println(arr[0][0]);
+        System.out.println(arr[0][1]);
+        System.out.println(arr[0][2]);
+
+        //向二维数组中存储元素
+        arr[0][0] = 11;
+        arr[0][1] = 12;
+        arr[0][2] = 13;
+
+        arr[1][0] = 11;
+        arr[1][1] = 12;
+        arr[1][2] = 13;
+
+        arr[2][0] = 11;
+        arr[2][1] = 12;
+        arr[2][2] = 13;
+
+        //从二维数组中取出元素并打印
+        System.out.println(arr[0][0]);
+        System.out.println(arr[0][1]);
+        System.out.println(arr[0][2]);
+
+        System.out.println(arr[1][0]);
+        System.out.println(arr[1][1]);
+        System.out.println(arr[1][2]);
+
+        System.out.println(arr[2][0]);
+        System.out.println(arr[2][1]);
+        System.out.println(arr[2][2]);
     }
 
 }
