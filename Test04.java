@@ -1,30 +1,42 @@
-package day02;
+package day01_10.day04;
 
-//设计一个方法，该方法可以同时获取数组的最大值和最小值
+import java.util.Scanner;
+
 public class Test04 {
     public static void main(String[] args) {
-        int[] arr = {11, 22, 33, 44, 55};
-        int[] a = num(arr);
-        System.out.println(a[0]);
-        System.out.println(a[1]);
 
-    }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入字符串：");
+        String s = sc.nextLine();
 
-    public static int[] num(int[] arr) {
-        int max = arr[0];
-        int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
 
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-            if (arr[i] < min) {
-                min = arr[i];
+        //ctrl + alt + v   快速创建类接收方法返回值
+        char[] chars = s.toCharArray();
 
+        //char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            //char d = chars[i];
+
+            if (chars[i] >= 'A' && chars[i] <= 'Z') {
+                a++;
+            }else if(chars[i] >= 'a' && chars[i] <= 'z'){
+                b++;
+            }else if(chars[i] >= '0' && chars[i] <= '9') {
+                c++;
+            }else{
+                d++;
             }
 
         }
-        int[] maxAndMin = {min, max};
-        return maxAndMin;
+        System.out.println("输入的字符串中大写字母字符出现的次数为："+a);
+        System.out.println("输入的字符串中小写字母字符出现的次数为："+b);
+        System.out.println("输入的字符串中数字字符出现的次数为："+c);
+        System.out.println("输入的字符串中其它字符出现的次数为："+d);
+
+
     }
 }

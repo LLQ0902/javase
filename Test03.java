@@ -1,22 +1,19 @@
-package day02;
+package day01_10.day04;
 
-// 设计一个方法用于获取数组中元素的最大值
+import java.util.Scanner;
+
 public class Test03 {
+    public static void main(String[] args) {
 
-    public static void main(String[] arge) {
-        //数据类型 变量名  =  值
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入：");
+        String s = sc.nextLine();
 
-        int[] arr = {11, 22, 33, 44, 55};
-        int max = array(arr);
-        System.out.println(array(arr));
-    }
+        //遍历字符串方法二
+        char [] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            System.out.println(chars[i]);
 
-    public static int array(int[] arr) {
-        int max = arr[0];
-        for (int i = 0; i < arr.length; i++)
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        return max;
+        }
     }
 }

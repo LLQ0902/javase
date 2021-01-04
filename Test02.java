@@ -1,21 +1,21 @@
-package day02;
-//设计一个方法用于数组遍历，要求遍历结果在一行，例如：[11,22,33,44,55]
+package day01_10.day04;
+
+import java.util.Scanner;
 
 public class Test02 {
     public static void main(String[] args) {
-        int[] arr = {11, 22, 33, 44, 55};
-        array(arr);
-    }
 
-    public static void array(int[] arr) {
-        System.out.print("[");
-        for (int i = 0; i < arr.length; i++) {
-            if (i == arr.length - 1) {
-                System.out.println(arr[i] + "]");
-            } else {
-                System.out.print(arr[i] + ", ");
-            }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入：");
+        String s = sc.nextLine();
 
+        //遍历字符串方法一
+        for (int i = 0; i <s.length() ; i++) {
+            char c = s.charAt(i);//就是指定索引处的字符值
+
+            System.out.println(c);
         }
+
+
     }
 }
