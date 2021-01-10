@@ -1,17 +1,17 @@
-package day01_10.day05;
+package day01_10.day07;
+/*
 
+ */
 public class Student {
-    private String name;
+    private  String name = "小圈";
     private String age;
-
 
     public Student(String name, String age) {
         this.name = name;
         this.age = age;
-        //构造方法
     }
-        //空参构造方法
-    public Student(String name, int age) {
+
+    public Student() {
     }
 
     public String getName() {
