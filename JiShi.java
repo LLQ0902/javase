@@ -1,19 +1,23 @@
 package day01_10.day09;
+//技师类
+/**
+ * @author 小小刘
+ * @date 2020/12/9 10:47
+ */
+public class JiShi {
+    private String sid;     // 工号
+    private String name;    // 姓名
+    private int age;        // 年龄
+    private String birthday; // 生日
 
-public class Student {
-    private String sid;
-    private String name;
-    private int age;
-    private String birthday;
-
-    public Student() {
+    public JiShi() {
     }
 
-    public Student(String sid, String name, int age, String birthday) {
-        this.sid = sid;//学号
-        this.name = name;//姓名
-        this.age = age;//年龄
-        this.birthday = birthday;//生日
+    public JiShi(String sid, String name, int age, String birthday) {
+        this.sid = sid;
+        this.name = name;
+        this.age = age;
+        this.birthday = birthday;
     }
 
     public String getSid() {
