@@ -1,27 +1,39 @@
-package day01_10.day10.demo02;
-//测试类
-//规则：子类中所有的构造方法默认都会访问父类中无参的构造方法
+package day11_20.day13.demo03;
+
+/**
+ * @author 小小刘
+ * @date 2020/12/5 21:09
+ */
 public class Demo {
     public static void main(String[] args) {
-        Teacher t1 = new Teacher();
-        t1.setName("刘亦菲");
-        t1.setAge(24);
-        System.out.println(t1.getName()+"...."+t1.getAge());
-        t1.teach();
+        BasketballAthlete b = new BasketballAthlete();
+        b.setName("詹姆斯");
+        b.setAge(23);
+        b.eat();
+        b.study();
+        System.out.println(b.getName()+","+b.getAge());
+        System.out.println("--------------------");
 
-        Teacher t2 = new Teacher("朱茵",25);
-        System.out.println(t2.getName()+"...."+t2.getAge());
-        t2.teach();
+        PingPongAthlete p = new PingPongAthlete();
+        p.setName("邓亚萍");
+        p.setAge(34);
+        p.eat();
+        p.study();
+        p.studyEnglish();
+        System.out.println(p.getName()+","+p.getAge());
+        System.out.println("--------------------");
 
+        BasketballCoach c = new BasketballCoach("乔丹",27);
+        c.teach();
+        c.eat();
+        System.out.println(c.getName()+","+c.getAge());
 
-        Student s1 = new Student();
-        s1.setName("陈冠希");
-        s1.setAge(24);
-        System.out.println(s1.getName()+"....."+s1.getAge());
-        s1.study();
-
-        Student s2 = new Student("吴彦祖",26);
-        System.out.println(s2.getName()+"...."+s2.getAge());
-        s2.study();
+        System.out.println("--------------------");
+        PingPongCoach g = new PingPongCoach("刘某某",40);
+        g.eat();
+        g.teach();
+        g.studyEnglish();
+        System.out.println(g.getName()+","+g.getAge());
     }
+
 }

@@ -1,18 +1,32 @@
-package day01_10.day10.demo02;
+package day11_20.day12.demo01;
 
+/**
+ * @author 小小刘
+ * @date 2020/12/4 19:01
+ */
+/*
+  ①定义老师类(姓名，年龄，教书())
+
+  ②定义学生类(姓名，年龄，学习())
+
+  ③定义测试类，写代码测试
+
+  ④共性抽取父类，定义人类(姓名，年龄)
+
+  ⑤定义老师类，继承人类，并给出自己特有方法：教书()
+
+  ⑥定义学生类，继承人类，并给出自己特有方法：学习()
+
+  ⑦定义测试类，写代码测试
+ */
 public class Teacher extends Person{
-
-    public Teacher() {
-        super();//每一个子类构造方法的第一条语句默认都是：super();一般写
-    }
-
-    public Teacher(String name, int age) {
-//        super();//每一个子类构造方法的第一条语句默认都是：super();
-        super(name, age);//super(…)  -  访问父类构造方法
+    public Teacher(){}
+    public Teacher(String name,int age){
+        super(name,age);
     }
 
     public void teach(){
-        System.out.println("用爱成就每一位学生");
+        System.out.println("教书");
     }
 
 }

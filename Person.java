@@ -1,6 +1,10 @@
-package day01_10.day10.demo02;
+package day11_20.day13.demo03;
 
-public class Person {
+/**
+ * @author 小小刘
+ * @date 2020/+++++20:50
+ */
+public abstract class  Person {
     private String name;
     private int age;
 
@@ -27,6 +31,5 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-
-
+    public abstract void eat();
 }

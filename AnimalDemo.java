@@ -1,38 +1,29 @@
-package day11_20.day11.demo03;
-/*
-    向上转型
-        从子到父
-        父类引用指向子类对象
+package day11_20.day13.demo01;
 
-     向下转型
-        从父到子
-        父类引用转为子类对象
+/**
+ * @author 小小刘
+ * @date 2020/12/5 11:50
  */
 public class AnimalDemo {
     public static void main(String[] args) {
+
         //多态
-        Animal a = new Cat();//向上转型
+        Animal a = new Cat();
         a.eat();
+        a.setName("小橘");
+        a.setAge(3);
+        System.out.println(a.getName()+","+a.getAge());
+        ((Cat) a).jump();
 
 
-//        A.playGame();
-       // ((Cat) A).playGame();   ???
-/*
-        Cat c = new Cat();
-        c.playGame();
-        c.eat();
-*/
-        //Cat c = (Cat) A;c.playGame();  等价于((Cat) A).playGame();
-        //向下转型
-        Cat c = (Cat) a;
-        c.playGame();    //Cat c = (Cat) A;c.playGame();  等价于
-        c.eat();
+        System.out.println("------------");
+        Jumpping j = new Cat();
+        j.jump();
+        ((Cat) j).eat();
 
-        a =new Dog();
-
-//        Cat cc = ((Cat) A);   //ClassCastException类型转换异常
-//        cc.eat();
-//        cc.playGame();
+        System.out.println("------------");
+        Cat b = new Cat();
+        b.eat();
+        b.jump();
     }
-
 }
